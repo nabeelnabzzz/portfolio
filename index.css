@@ -3,8 +3,6 @@
     font-family: "Audiowide", sans-serif;
 }
 
-
-
 .fullBody{
     width: 100%;
     background: #C0CED1;
@@ -67,6 +65,7 @@
 
 .aboutDiv{
     height: 100vh;
+    border-bottom:2px solid #071C34 ;
 }
 
 #aboutText{
@@ -134,13 +133,18 @@
 }
 
 .chatMe{
-    background: #144361;
+    background: #C0CED1;
     max-height: 100%;
 }
 
-#chatwith{
-    color: #C0CED1;
+.projectDiv{
+    border-bottom:2px solid #071C34 ;
 }
+
+.skillDiv{
+    border-bottom:2px solid #071C34 ;
+}
+
 
 .cardDiv{
     width: 18rem;
@@ -313,7 +317,6 @@ a:link{
     width: 80px;
     animation: fade-up 15s linear infinite;
 }
-
 
 
 @keyframes fade-up {

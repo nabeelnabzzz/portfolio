@@ -1,21 +1,24 @@
 
 
-
-
-
 function sendMail(){
-
-  var params = {
-    from_name : document.getElementById("from_name").value,
-    from_email : document.getElementById("from_email").value,
-    subject : document.getElementById("subject").value,
-    message : document.getElementById("message").value
+  let name = document.getElementById("from_name").value;
+  let mail = document.getElementById("from_email").value;
+  let subject =  document.getElementById("subject").value;
+  let message = document.getElementById("message").value
+  if(name != null && mail != null && subject != null && message != null){
+    var params = {
+      from_name : name,
+      from_email : mail,
+      subject : subject,
+      message : message
+    }
+      
+    emailjs.send("service_9tvua0o","template_4ivojc5",params).then (function (res){
+      alert("success"+ res.status);
+      document.contact-form.reset();
+    });
   }
-    
-  emailjs.send("service_9tvua0o","template_4ivojc5",params).then (function (res){
-    alert("success"+ res.status);
-    // document.contact-form.reset();
-  });
+  
 }
 
 
@@ -35,17 +38,3 @@ document.addEventListener("DOMContentLoaded", () => {
   squares.forEach((element) => observer.observe(element));
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        writing();
-      } else {
-       
-      }
-    });
-  });
-
-  const squares = document.querySelectorAll('.text-animate');
-  squares.forEach((element) => observer.observe(element));
-});
